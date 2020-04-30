@@ -1,4 +1,4 @@
-Emojinator  
+##**Emojinator**  
 This code helps you to recognize and classify different emojis. 
 
 Code Requirements
