@@ -1,5 +1,6 @@
 **Emojinator**  
-This code helps you to recognize and classify different emojis. 
+This code helps you to recognize and classify different hand emojis. 
+!(https://blog.emojipedia.org/content/images/2016/11/hands.jpg)
 
 **Code Requirements**
 
