@@ -1,6 +1,6 @@
 **Emojinator**  
 This code helps you to recognize and classify different hand emojis. 
-!(https://blog.emojipedia.org/content/images/2016/11/hands.jpg)
+!(https://imgix.bustle.com/uploads/image/2020/4/8/4bbe41e3-81c4-4660-95de-3c432687af2e-4341da6b-70d4-40bb-aacb-c19e545c1e85-img_9458.jpg?w=970&h=546&fit=crop&crop=faces&auto=format%2Ccompress&cs=srgb&q=70)
 
 **Code Requirements**
 
