@@ -12,7 +12,7 @@ Emojis are ideograms and smileys used in electronic messages and web pages. Emoj
 
 **Functionalities**
 
-Filters to detect hand.
+Filters to detect hand movements.
 CNN for training the model.
 Python Implementation
 Network Used- Convolutional Neural Network
