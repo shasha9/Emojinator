@@ -18,4 +18,4 @@ for directory, subdirectories, files in os.walk(root):
         df = pd.DataFrame(value).T
         df = df.sample(frac=1) # shuffle the dataset
         with open('train_foo.csv', 'a') as dataset:
-            df.to_csv(dataset, header=False, index=False)
+            df.to_csv( dataset, header=False, index=False)
