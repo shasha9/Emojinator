@@ -54,8 +54,8 @@ def keras_process_image(img):
     image_x = 50
     image_y = 50
     img = cv2.resize(img, (image_x, image_y))
-    img = np.array(img, dtype=np.float32)
-    img = np.reshape(img, (-1, image_x, image_y, 1))
+    img =  np.array(img, dtype=np.float32)
+    img =  np.reshape(img, (-1, image_x, image_y, 1))
     return img
 
 def get_emojis():
