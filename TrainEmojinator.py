@@ -5,7 +5,7 @@ from keras.layers import AveragePooling2D, MaxPooling2D, Dropout, GlobalMaxPooli
 from keras.utils import np_utils
 from keras.models import Sequential
 from keras.callbacks import ModelCheckpoint
-import pandas as pd
+import pandas as pd //importing packages
 
 import keras.backend as K
 
