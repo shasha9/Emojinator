@@ -19,13 +19,13 @@ def main():
         gray = cv2.cvtColor(res, cv2.COLOR_BGR2GRAY)
         median = cv2.GaussianBlur(gray, (5, 5), 0)
 
-        kernel_square = np.ones((5, 5), np.uint8)
+        kernel_square = np.ones((5, 5),np.uint8)
         dilation =  cv2.dilate(median, kernel_square, iterations=2)
-        opening =  cv2.morphologyEx(dilation, cv2.MORPH_CLOSE, kernel_square)
-        ret, thresh =  cv2.threshold(opening, 30, 255, cv2.THRESH_BINARY)
+        opening =  cv2.morphologyEx(dilation,cv2.MORPH_CLOSE,kernel_square)
+        ret, thresh =  cv2.threshold(opening,30,255,cv2.THRESH_BINARY)
 
-        thresh =  thresh[y:y + h, x:x + w]
-        contours =  cv2.findContours(thresh.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[1]
+        thresh =thresh[y:y + h, x:x + w]
+        contours =cv2.findContours(thresh.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[1]
         if len(contours) > 0:
             contour =  max(contours, key=cv2.contourArea)
             if cv2.contourArea(contour) > 2500:
@@ -80,7 +80,7 @@ def blend_transparent(face_img, overlay_t_img):
     overlay_mask = overlay_t_img[:,:,3:]  # And the alpha plane
 
     # Again calculate the inverse mask
-    background_mask = 255 - overlay_mask
+    background_mask =255 - overlay_mask
 
     # Turn the masks into three channel, so we can use them as weights
     overlay_mask = cv2.cvtColor(overlay_mask, cv2.COLOR_GRAY2BGR)
