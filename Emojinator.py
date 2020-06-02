@@ -17,12 +17,12 @@ def main():
         mask2 = cv2.inRange(hsv, np.array([2, 50, 60]), np.array([25, 150, 255]))
         res = cv2.bitwise_and(img, img, mask=mask2)
         gray = cv2.cvtColor(res, cv2.COLOR_BGR2GRAY)
-        median = cv2.GaussianBlur(gray, (5, 5), 0)
+        median =cv2.GaussianBlur(gray, (5, 5), 0)
 
-        kernel_square = np.ones((5, 5),np.uint8)
-        dilation =  cv2.dilate(median, kernel_square, iterations=2)
-        opening =  cv2.morphologyEx(dilation,cv2.MORPH_CLOSE,kernel_square)
-        ret, thresh =  cv2.threshold(opening,30,255,cv2.THRESH_BINARY)
+        kernel_square =np.ones((5, 5),np.uint8)
+        dilation =cv2.dilate(median, kernel_square, iterations=2)
+        opening =cv2.morphologyEx(dilation,cv2.MORPH_CLOSE,kernel_square)
+        ret, thresh =cv2.threshold(opening,30,255,cv2.THRESH_BINARY)
 
         thresh =thresh[y:y + h, x:x + w]
         contours =cv2.findContours(thresh.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[1]
