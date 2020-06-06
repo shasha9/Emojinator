@@ -1,3 +1,4 @@
+#first import all modules.
 import numpy as np
 from keras import layers
 from keras.layers import Input, Dense, Activation, ZeroPadding2D, BatchNormalization, Flatten, Conv2D
@@ -6,7 +7,6 @@ from keras.utils import np_utils
 from keras.models import Sequential
 from keras.callbacks import ModelCheckpoint
 import pandas as pd //importing packages
-
 import keras.backend as K
 
 def keras_model(image_x, image_y):
