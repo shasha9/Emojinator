@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import os
 
-image_x, image_y = 50, 50
+image_x, image_y =50, 50
 
 cap = cv2.VideoCapture(0)
 fbag = cv2.createBackgroundSubtractorMOG2()
@@ -72,5 +72,5 @@ def main(g_id):
             break
 
 
-g_id = input("Enter gesture number: ")
+g_id =input("Enter gesture number: ")
 main(g_id)
