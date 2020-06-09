@@ -3,7 +3,7 @@ from keras.models import load_model
 import numpy as np
 import os
 
-model = load_model('emojinator.h5')
+model=load_model('emojinator.h5')
 
 def main():
     emojis = get_emojis()
