@@ -34,9 +34,9 @@ def main():
                 newImage =  cv2.resize(newImage, (50, 50))
                 pred_probab, pred_class = keras_predict(model, newImage)
                 print(pred_class, pred_probab)
-                img = overlay(img, emojis[pred_class], 400, 250, 90, 90)
+                img=overlay(img, emojis[pred_class], 400, 250, 90, 90)
 
-        x, y, w, h = 300, 50, 350, 350
+        x, y, w, h=300, 50, 350, 350
         cv2.imshow("Frame", img)
         cv2.imshow("Contours", thresh)
         k = cv2.waitKey(10)
