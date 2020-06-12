@@ -11,7 +11,7 @@ import keras.backend as K
 
 def keras_model(image_x, image_y):
     num_of_classes = 12
-    model = Sequential()
+    model =Sequential()
     model.add(Conv2D(32, (5, 5), input_shape=(image_x, image_y, 1), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2), padding='same'))
     model.add(Conv2D(64, (5, 5), activation='sigmoid'))
