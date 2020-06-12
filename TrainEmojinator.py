@@ -22,7 +22,7 @@ def keras_model(image_x, image_y):
     model.add(Dense(num_of_classes, activation='softmax'))
 
     model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
-    filepath = "emojinator.h5"
+    filepath ="emojinator.h5"
     checkpoint1 = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True, mode='max')
     callbacks_list = [checkpoint1]
 
